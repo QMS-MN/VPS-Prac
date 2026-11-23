@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCompany - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 480px;
+            background: linear-gradient(120deg, #1e40af, #3b82f6);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: white;
+            color: #2563eb;
+            padding: 13px 28px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #e5e7eb;
+        }
+
+        /* Common Section */
+        section {
+            padding: 65px 8%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 30px 20px;
+            border-radius: 10px;
+            background: #f8fafc;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        }
+
+        .service-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* About */
+        .about {
+            background: #f1f5f9;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+        }
+
+        /* Statistics */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card h2 {
+            color: #2563eb;
+            font-size: 35px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .services,
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="logo">MyCompany</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to MyCompany</h1>
+
+        <p>
+            We provide innovative technology solutions
+            to help businesses grow, improve productivity
+            and achieve their goals.
+        </p>
+
+        <a href="contact.html" class="btn">Get Started</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+
+        <p class="section-description">
+            Explore the services we offer to our customers.
+        </p>
+
+        <div class="services">
+
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>
+                    Build modern, responsive and scalable
+                    websites for your business.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Mobile Applications</h3>
+                <p>
+                    Develop Android and iOS applications
+                    with excellent user experience.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>AI Solutions</h3>
+                <p>
+                    Implement intelligent AI solutions
+                    to automate business processes.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Us</h2>
+
+        <p>
+            MyCompany is a technology-driven organization
+            focused on delivering innovative software
+            solutions. Our mission is to help businesses
+            transform digitally through modern technologies,
+            creativity and innovation.
+        </p>
+    </section>
+
+    <!-- Statistics Section -->
+    <section>
+        <h2 class="section-title">Our Achievements</h2>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h2>150+</h2>
+                <p>Projects Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>100+</h2>
+                <p>Happy Clients</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>10+</h2>
+                <p>Years Experience</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 MyCompany. All Rights Reserved.
+        </p>
+
+        <p>
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
+</html>
