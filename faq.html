@@ -260,3 +260,197 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 40px 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            background: white;
+            text-align: left;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #f0f5ff;
+        }
+
+        .faq-question span {
+            font-size: 22px;
+            color: #2563eb;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 20px 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: #2563eb;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .faq-question {
+                font-size: 15px;
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="faq-container">
+
+        <h1>Frequently Asked Questions</h1>
+        <p class="subtitle">
+            Find answers to commonly asked questions.
+        </p>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What is your application?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Our application helps users manage their activities
+                through a simple and user-friendly platform.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How can I create an account?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Click on the Register button, enter your details,
+                and submit the registration form.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is the application free?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                We provide both free and premium plans.
+                You can select a plan based on your requirements.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How can I reset my password?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                Click on Forgot Password on the login page.
+                Enter your registered email address to receive
+                password reset instructions.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                How can I contact customer support?
+                <span>+</span>
+            </button>
+            <div class="faq-answer">
+                You can contact our support team through the
+                Contact Us page or by sending an email.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+            const question = item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+
+                // Close other FAQ items
+                faqItems.forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove("active");
+                        faq.querySelector("span").textContent = "+";
+                    }
+                });
+
+                // Toggle current FAQ
+                item.classList.toggle("active");
+
+                const icon = item.querySelector("span");
+
+                icon.textContent = item.classList.contains("active")
+                    ? "-"
+                    : "+";
+            });
+        });
+    </script>
+
+</body>
+</html>
