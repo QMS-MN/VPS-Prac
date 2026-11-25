@@ -1,3 +1,5 @@
-#readme generated in main branch
+#readme generated in main branch.
 
-#this is bug branch
+#this is bug branch.
+
+#updating new content for checking conflict.
