@@ -1,0 +1,16 @@
+name: basic workflow
+on:
+  push:
+jobs:
+  first-job:
+    runs-on:ubuntu-latest
+    steps:
+      -name : print message
+        run : echo "Hello Github Action"
+      -name : show current date
+        run : date
+      -name : show current  directory
+        run : pwd
+      -name : list files
+        run : ls -ls
+    
